@@ -1,0 +1,236 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.0.0"
+        }
+    ],
+    "resources": [
+        {
+            "description": "Stock color for the light theme",
+            "colors": {
+                "colorTextPrimary": "#151920"
+            }
+        },
+        {
+            "description": "Stock color for the dark theme",
+            "when": "${viewport.theme == 'dark'}",
+            "colors": {
+                "colorTextPrimary": "#f0f1ef"
+            }
+        },
+        {
+            "description": "Standard font sizes",
+            "dimensions": {
+                "textSizeBody": 48,
+                "textSizePrimary": 27,
+                "textSizeSecondary": 23,
+                "textSizeSecondaryHint": 25
+            }
+        },
+        {
+            "description": "Common spacing values",
+            "dimensions": {
+                "spacingThin": 6,
+                "spacingSmall": 12,
+                "spacingMedium": 24,
+                "spacingLarge": 48,
+                "spacingExtraLarge": 72
+            }
+        },
+        {
+            "description": "Common margins and padding",
+            "dimensions": {
+                "marginTop": 40,
+                "marginLeft": 60,
+                "marginRight": 60,
+                "marginBottom": 40
+            }
+        }
+    ],
+    "styles": {
+        "textStyleBase": {
+            "description": "Base font description; set color",
+            "values": [
+                {
+                    "color": "@colorTextPrimary"
+                }
+            ]
+        },
+        "textStyleBase0": {
+            "description": "Thin version of basic font",
+            "extend": "textStyleBase",
+            "values": {
+                "fontWeight": "100"
+            }
+        },
+        "textStyleBase1": {
+            "description": "Light version of basic font",
+            "extend": "textStyleBase",
+            "values": {
+                "fontWeight": "300"
+            }
+        },
+        "mixinBody": {
+            "values": {
+                "fontSize": "@textSizeBody"
+            }
+        },
+        "mixinPrimary": {
+            "values": {
+                "fontSize": "@textSizePrimary"
+            }
+        },
+        "mixinSecondary": {
+            "values": {
+                "fontSize": "@textSizeSecondary"
+            }
+        },
+        "textStylePrimary": {
+            "extend": [
+                "textStyleBase1",
+                "mixinPrimary"
+            ]
+        },
+        "textStyleSecondary": {
+            "extend": [
+                "textStyleBase0",
+                "mixinSecondary"
+            ]
+        },
+        "textStyleBody": {
+            "extend": [
+                "textStyleBase1",
+                "mixinBody"
+            ]
+        },
+        "textStyleSecondaryHint": {
+            "values": {
+                "fontFamily": "Bookerly",
+                "fontStyle": "italic",
+                "fontSize": "@textSizeSecondaryHint",
+                "color": "@colorTextPrimary"
+            }
+        }
+    },
+    "layouts": {
+        "CardsBoardLayout": {
+            "items": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "Container",
+                            "direction": "row",
+                            "justifyContent": "center",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "width": "20vw",
+                                    "height": "30vh",
+                                    "source": "${payload.bodyTemplate3Data.cardImage.sources[0].url}"
+                                },
+                                {
+                                    "type": "Image",
+                                    "width": "20vw",
+                                    "height": "30vh",
+                                    "source": "${payload.bodyTemplate3Data.cardImage.sources[1].url}"
+                                },
+                                {
+                                    "type": "Image",
+                                    "width": "20vw",
+                                    "height": "30vh",
+                                    "source": "${payload.bodyTemplate3Data.cardImage.sources[2].url}"
+                                },
+                                {
+                                    "type": "Image",
+                                    "width": "20vw",
+                                    "height": "30vh",
+                                    "source": "${payload.bodyTemplate3Data.cardImage.sources[3].url}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Container",
+                            "direction": "row",
+                            "justifyContent": "center",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "width": "20vw",
+                                    "height": "30vh",
+                                    "source": "${payload.bodyTemplate3Data.cardImage.sources[4].url}"
+                                },
+                                {
+                                    "type": "Image",
+                                    "width": "20vw",
+                                    "height": "30vh",
+                                    "source": "${payload.bodyTemplate3Data.cardImage.sources[5].url}"
+                                },
+                                {
+                                    "type": "Image",
+                                    "width": "20vw",
+                                    "height": "30vh",
+                                    "source": "${payload.bodyTemplate3Data.cardImage.sources[6].url}"
+                                },
+                                {
+                                    "type": "Image",
+                                    "width": "20vw",
+                                    "height": "30vh",
+                                    "source": "${payload.bodyTemplate3Data.cardImage.sources[7].url}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "items": [
+                    {
+                        "type": "Image",
+                        "source": "${payload.bodyTemplate3Data.backgroundImage.sources[0].url}",
+                        "scale": "best-fill",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "position": "absolute"
+                    },
+                    {
+                        "type": "AlexaHeader",
+                        "headerTitle": "${payload.bodyTemplate3Data.title}",
+                        "headerAttributionImage": "${payload.bodyTemplate3Data.logoUrl}"
+                    },
+                    {
+                        "type": "Pager",
+                        "id": "mainPager",
+                        "width": "100vw",
+                        "height": "90vh",
+                        "paddingLeft": "5vw",
+                        "paddingRight": "5vw",
+                        "paddingBottom": "5vh",
+                        "item": [
+                            {
+                                "type": "CardsBoardLayout"
+                            }
+                        ],
+                        "navigation": "none",
+                        "alignItems": "center",
+                        "justifyContent": "center"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,130 @@
+{
+    "bodyTemplate3Data": {
+        "type": "object",
+        "objectId": "bt3Sample",
+        "title": "ねこねこゲーム",
+        "subtitle": "ねこねこゲーム",
+        "sounds": {
+            "topicSound": [
+                "(鳴き声URL)cat1a.mp3",
+                "(鳴き声URL)cat1b.mp3",
+                "(鳴き声URL)cat2a.mp3",
+                "(鳴き声URL)cat2b.mp3",
+                "(鳴き声URL)cat3a.mp3",
+                "(鳴き声URL)cat3b.mp3"
+            ]
+        },
+        "backgroundImage": {
+            "sources": [
+                {
+                    "url": "（猫画像URL）bg1mod.png",
+                    "size": "small",
+                    "widthPixels": 0,
+                    "heightPixels": 0
+                }
+            ]
+        },
+        "playerImage": {
+            "source": {
+                "url": "https://d2o906d8ln7ui1.cloudfront.net/images/sm_gouda.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+            }
+        },
+        "cardImage": {
+            "sources": [
+                {
+                    "url": "（猫数字画像URL）1.png"
+                },
+                {
+                    "url": "（猫数字画像URL）2.png"
+                },
+                {
+                    "url": "（猫数字画像URL）3.png"
+                },
+                {
+                    "url": "（猫数字画像URL）4.png"
+                },
+                {
+                    "url": "（猫数字画像URL）5.png"
+                },
+                {
+                    "url": "（猫数字画像URL）6.png"
+                },
+                {
+                    "url": "（猫数字画像URL）7.png"
+                },
+                {
+                    "url": "（猫数字画像URL）8.png"
+                }
+            ]
+        },
+        "leftSideImage": {
+            "sources": [
+                {
+                    "url": "（猫数字画像URL）1.png"
+                },
+                {
+                    "url": "（猫画像URL）0_0.png"
+                },
+                {
+                    "url": "（猫画像URL）0_1.png"
+                }
+            ]
+        },
+        "rightSideImage": {
+            "sources": [
+                {
+                    "url": "（猫数字画像URL）2.png"
+                },
+                {
+                    "url": "（猫画像URL）1_0.png"
+                },
+                {
+                    "url": "（猫画像URL）1_1.png"
+                }
+            ]
+        },
+        "image": {
+            "sources": [
+                {
+                    "url": "(テスト)0.png",
+                    "size": "small",
+                    "widthPixels": 0,
+                    "heightPixels": 0
+                }
+            ]
+        },
+        "properties": {
+            "Ssml_0": "<speak>１番の鳴き声</speak>",
+            "Ssml_1": "<speak>２番の鳴き声</speak>",
+            "Ssml_selres": "<speak>結果</speak>",
+            "Ssml_next": "<speak>次のアクション</speak>"
+        },
+        "transformers": [
+            {
+                "inputPath": "Ssml_0",
+                "outputName": "Speech_0",
+                "transformer": "ssmlToSpeech"
+            },
+            {
+                "inputPath": "Ssml_1",
+                "outputName": "Speech_1",
+                "transformer": "ssmlToSpeech"
+            },
+            {
+                "inputPath": "Ssml_selres",
+                "outputName": "Speech_res",
+                "transformer": "ssmlToSpeech"
+            },
+            {
+                "inputPath": "Ssml_next",
+                "outputName": "Speech_next",
+                "transformer": "ssmlToSpeech"
+            }
+        ],
+        "logoUrl": "（猫画像URL）logo.png",
+        "hintText": ""
+    }
+}

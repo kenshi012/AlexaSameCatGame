@@ -1,0 +1,352 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "ねこねこゲーム",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "終了"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "showBoardIntent",
+                    "slots": [
+                        {
+                            "name": "boardStatusStr",
+                            "type": "boardStatus"
+                        }
+                    ],
+                    "samples": [
+                        "残っている子は",
+                        "誰が残っているの",
+                        "{boardStatusStr}",
+                        "{boardStatusStr} どうなっているの",
+                        "{boardStatusStr} を教えて",
+                        "{boardStatusStr} を見せて",
+                        "{boardStatusStr} が見たい",
+                        "{boardStatusStr} を確認",
+                        "{boardStatusStr} を表示"
+                    ]
+                },
+                {
+                    "name": "CardsSelectIntent",
+                    "slots": [
+                        {
+                            "name": "cardA",
+                            "type": "selectedCardNum",
+                            "samples": [
+                                "{cardA}",
+                                "{cardA} 番のカード",
+                                "{cardA} のカード",
+                                "{cardA} 番"
+                            ]
+                        },
+                        {
+                            "name": "cardB",
+                            "type": "selectedCardNum",
+                            "samples": [
+                                "{cardB} 番のカード",
+                                "{cardB} のカード",
+                                "{cardB} 番",
+                                "{cardB}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{cardA} のカードと {cardB} のカード",
+                        "{cardA} 番とそれから {cardB} 番のカード",
+                        "{cardA} 番と {cardB} 番のカード",
+                        "{cardA} 番のカードと {cardB} 番",
+                        "{cardA} 番のカードと {cardB} 番のカード",
+                        "{cardA} 番と {cardB} ",
+                        "{cardA} と {cardB} 番",
+                        "{cardA} 番と {cardB} 番",
+                        "{cardA} と {cardB}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "selectedCardNum",
+                    "values": [
+                        {
+                            "id": "8",
+                            "name": {
+                                "value": "8",
+                                "synonyms": [
+                                    "8",
+                                    "８",
+                                    "やっつ目",
+                                    "はち",
+                                    "ばちばん",
+                                    "八番"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "7",
+                            "name": {
+                                "value": "7",
+                                "synonyms": [
+                                    "7",
+                                    "７",
+                                    "ななつ目",
+                                    "なな",
+                                    "ななばん",
+                                    "七番",
+                                    "しち"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "6",
+                            "name": {
+                                "value": "6",
+                                "synonyms": [
+                                    "6",
+                                    "６",
+                                    "むっつ目",
+                                    "ろく",
+                                    "ろくばん",
+                                    "六番"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "5",
+                            "name": {
+                                "value": "5",
+                                "synonyms": [
+                                    "5",
+                                    "５",
+                                    "いつつ目",
+                                    "ご",
+                                    "ごばん",
+                                    "五番"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "name": {
+                                "value": "4",
+                                "synonyms": [
+                                    "4",
+                                    "４",
+                                    "よっつ目",
+                                    "よん",
+                                    "よんばん",
+                                    "四番",
+                                    "し"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "3",
+                                "synonyms": [
+                                    "3",
+                                    "３",
+                                    "みっつ目",
+                                    "さん",
+                                    "さんばん",
+                                    "三番"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "2",
+                                "synonyms": [
+                                    "2",
+                                    "２",
+                                    "ふたつ目",
+                                    "に",
+                                    "にばん",
+                                    "二番"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "1",
+                                "synonyms": [
+                                    "1",
+                                    "１",
+                                    "ひとつ目",
+                                    "いち",
+                                    "いちばん",
+                                    "一番"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "boardStatus",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "盤面",
+                                "synonyms": [
+                                    "猫さん",
+                                    "猫",
+                                    "子",
+                                    "現状",
+                                    "状態",
+                                    "ばんめん",
+                                    "ボード",
+                                    "カードの状態",
+                                    "盤面の状態",
+                                    "盤面",
+                                    "状況",
+                                    "カードの状態"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CardsSelectIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "cardA",
+                            "type": "selectedCardNum",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.899604010597.850623779664"
+                            }
+                        },
+                        {
+                            "name": "cardB",
+                            "type": "selectedCardNum",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.899604010597.1205795427113"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.899604010597.850623779664",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "ひとつ目のカードをもう一度お願いします。"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "ひとつ目のカードが聞き取れませんでした。もう一度お願いします。"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.899604010597.850623779664.1336965081040",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "ひとつ目のカードが聞き取れませんでした。一から八までの数字で選択してください"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "ひとつ目のカードを一から八までの数字で選択してください"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.899604010597.1205795427113.683708524194",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "ひとつ目は {cardA}ですね。ふたつ目が聞き取れませんでした。ふたつ目のカードを一から八までの数字で選択してください"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.899604010597.1205795427113",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "{cardA} ともうひとつが聞き取れませんでした。もう一度、二つのカードを一から八までの数字で選択してください"
+                    }
+                ]
+            }
+        ]
+    }
+}
